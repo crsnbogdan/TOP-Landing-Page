@@ -1,0 +1,282 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    text-align: center;
+}
+
+.defaultwidth {
+    width: 80vw;
+    margin: 0 auto;
+}
+
+header {
+    color: white;
+    background-color: #151d29;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.navbar {
+    padding: 25px 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.navbar li {
+    display: inline-block;
+}
+
+.navbar>li.logo {
+    margin-right: auto;
+    font-size: 24px;
+}
+
+.navbar img {
+    height: 50px;
+    width: auto;
+}
+
+.navbar>li>a:hover {
+    color: #32db68;
+    ;
+}
+
+.navbar>li>a {
+    text-decoration: none;
+    text-transform: lowercase;
+    color: white;
+    margin: 20px;
+}
+
+nav>ul.navbar>li:nth-child(4)>a,
+nav>ul.navbar>li:nth-child(1)>a {
+    margin: 0;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-around;
+    margin: auto;
+}
+
+header section.content-left {
+    width: 400px;
+}
+
+h1 {
+    font-size: 48px;
+    color: #32db68;
+}
+
+header section.content-left p,
+.nav-link:not(.logo),
+.header-button>a {
+    font-size: 18px;
+}
+
+header section.content-left p,
+header section.content-left h1,
+header section.content-left button {
+    margin: 10px 0;
+}
+
+header section.content-left button {
+    border: none;
+    background-color: #32db68;
+    display: inline-block;
+    padding: 10px 40px;
+    border-radius: 10px;
+}
+
+header section.content-left button a {
+    text-decoration: none;
+    color: white;
+}
+
+header section.content-right {
+    align-self: center;
+}
+
+header section.content-right img {
+    width: 350px;
+    height: auto;
+}
+
+#main-products {
+    padding: 50px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+h2 {
+    text-align: center;
+    width: 100%;
+}
+
+.main-section {
+    border: 7px solid #32db68;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 200px;
+    margin: 20px;
+    border-radius: 15px;
+}
+
+.main-section>img {
+    background-clip: text;
+    display: inline-block;
+    margin: 20px!important;
+    height: 100px;
+    margin: auto;
+}
+
+#main-quote {
+    box-sizing: border-box;
+    background-color: #e5e7eb;
+    padding: 50px 10vw;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+#main-quote blockquote {
+    font-size: 24px;
+}
+
+#main-quote address {
+    font-size: 24px;
+    font-weight: 700;
+    align-self: flex-end;
+    color: #32db68;
+}
+
+#main-cta {
+    padding: 50px 0;
+}
+
+#cta {
+    background-color: #32db68;
+    border-radius: 10px;
+    padding: 50px 0;
+    width: 80%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px 100px;
+}
+
+#cta-text {
+    color: white;
+}
+
+#cta-text p {
+    margin-top: 25px;
+    width: 80%
+}
+
+#cta-button {
+    border: 2px solid white;
+    background-color: transparent;
+    border-radius: 20px;
+    display: inline-block;
+    width: 200px;
+    padding: 5px 0;
+}
+
+#cta-button a {
+    color: white;
+    text-decoration: none;
+    word-wrap: normal;
+    padding: 10px 25px;
+}
+
+footer {
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #151d29;
+    color: #32db68;
+    padding: 50px 0;
+}
+
+@media only screen and (max-width: 1200px) {
+    header {
+        height: 65vh;
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    header {
+        height: 60vh;
+    }
+    header section.content-right img {
+        width: 250px;
+    }
+    #cta {
+        padding: 25px 50px;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    header {
+        height: 70vh;
+    }
+    #cta {
+        flex-direction: column;
+        width: 90%;
+    }
+    #cta {
+        padding: 10px 25px;
+    }
+    #cta-text p {
+        display: inline-block;
+    }
+    #cta-button {
+        margin-top: 25px;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .header-content {
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+    .content-left {
+        display: flex;
+        flex-direction: column;
+        max-width: 300px;
+    }
+    .content-left .header-button {
+        margin: auto;
+        width: 200px;
+    }
+    h1 {
+        font-size: 36px;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .navbar>.nav-link:not(.logo) {
+        display: none;
+    }
+    .navbar {
+        justify-content: center;
+    }
+    .navbar>li.logo {
+        margin-right: unset;
+    }
+    .navbar {
+        padding: 0;
+        margin-top: 15px;
+    }
+}
